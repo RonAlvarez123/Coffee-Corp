@@ -1,0 +1,165 @@
+@font-face {
+    font-family: Poppins;
+    src: url('../fonts/Poppins-Regular.ttf');
+}
+
+@font-face {
+    font-family: Poppins-Light;
+    src: url('../fonts/Poppins-Light.ttf');
+}
+
+@font-face {
+    font-family: Poppins-ExtraBold;
+    src: url('../fonts/Poppins-ExtraBold.ttf');
+}
+
+@font-face {
+    font-family: EduSABeginner-Bold;
+    src: url('../fonts/EduSABeginner-Bold.ttf');
+}
+
+$primary-color: #F8765E;
+$secondary-color: white;
+$tertiary-color: #9BDBE7;
+$textcolor1: #031D5B;
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.desktop {
+    display: none;
+}
+
+.primary-button,
+.primary-input {
+    border: none;
+    border-radius: 10px;
+    padding: .5rem 1rem;
+}
+
+.primary-button {
+    background-color: $tertiary-color;
+    box-shadow: 0 0 1px rgb(95, 95, 95);
+    color: $secondary-color;
+    text-shadow: 0 0 3px gray;
+}
+
+.primary-input {
+    background: #e0e0e0;
+    box-shadow: inset 6px 6px 8px #c5c5c5,
+        inset -6px -6px 8px #fbfbfb;
+}
+
+img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+header {
+    background-color: $primary-color;
+    color: $secondary-color;
+    padding-bottom: 80px;
+
+    a {
+        color: $secondary-color;
+        text-decoration: none;
+    }
+
+    nav {
+        display: grid;
+        margin-bottom: 20px;
+
+        &>a {
+            font-family: 'EduSABeginner-Bold', sans-serif;
+            font-size: 2rem;
+            padding: 15px 0;
+            text-align: center;
+            text-shadow: 0 0 3px rgb(86, 86, 86);
+        }
+
+        ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+
+            li {
+                display: inline;
+
+                a {
+                    padding: 10px;
+                }
+            }
+        }
+    }
+
+    section {
+        &:first-of-type {
+            img {
+                max-width: 100%;
+            }
+        }
+
+        &:last-of-type {
+            padding: 20px;
+            text-align: center;
+
+            form {
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                justify-content: center;
+                margin-top: 30px;
+
+                input {
+                    width: 80%;
+                }
+            }
+        }
+    }
+}
+
+main {
+    section {
+        background-color: $secondary-color;
+        display: grid;
+        padding: 20px;
+
+        &:nth-of-type(1) {
+            border-radius: 20px;
+            gap: 40px;
+            box-shadow: 0 0 10px #D2D2D2;
+            margin: 0 20px;
+            padding-bottom: 40px;
+            padding-top: 40px;
+            transform: translateY(-50px);
+
+            article {
+                display: grid;
+
+                h3 {
+                    border-bottom: 5px solid $primary-color;
+                    margin-bottom: 20px;
+                    padding-bottom: 5px;
+                    justify-self: flex-start;
+                }
+
+                p {
+                    font-size: .9rem;
+                }
+            }
+        }
+
+        &:nth-of-type(2) {
+            article {
+                &:nth-of-type(1) {
+
+                    img {}
+                }
+            }
+        }
+    }
+}
