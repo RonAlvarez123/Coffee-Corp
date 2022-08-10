@@ -703,3 +703,33 @@ footer {
         }
     }
 }
+
+@media screen and (min-width:1400px) {
+    header {
+        grid-template-columns: 220px repeat(2, calc(50% - 220px)) 220px;
+
+        nav {
+            padding: 0 210px;
+        }
+    }
+
+    main {
+        section {
+            &:nth-of-type(1) {
+                margin-left: 220px;
+                margin-right: 220px;
+            }
+
+            &:nth-of-type(2),
+            &:nth-of-type(4) {
+                padding-left: 220px;
+                padding-right: 220px;
+            }
+
+            &:nth-of-type(3) {
+                grid-template-columns: 300px auto;
+                padding-left: 220px;
+            }
+        }
+    }
+}
